@@ -1,1 +1,141 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+$enable-flex: true;
+$enable-grid-classes:true;
+
+*{
+  --hero-primary: #3f51b5;
+  --hero-background: #F5F7FC;
+  --hero-grey: #2f2e2e;
+}
+
+
+/********** Mat Sidenav **********/
+.hero-mat-sidenav {
+  border-left: 1px solid var(--hero-primary) !important;
+
+  @include media-breakpoint-up(xs) {
+    min-width: 360px !important;
+    width: 100% !important;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 400px !important;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 450px !important;
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 600px !important;
+  }
+}
+
+.hero-sidepanel-body {
+  font-size: 16px;
+  background-color: var(--hero-background);
+  color: var(--hero-grey);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 546px;
+  overflow: auto;
+
+  .mat-tab-body-wrapper {
+    height: 100%;
+    padding: 10px;
+    overflow: hidden !important;
+  }
+}
+
+.mat-drawer-content {
+  background-color: var(--hero-background);
+}
+
+.overflow-none.mat-drawer-content {
+  overflow: visible;
+}
+
+.mat-tab-body-content, .mat-drawer-inner-container {
+  height: auto;
+  overflow: hidden !important;
+}
+
+
+/********** Mat Table **********/
+$row-padding: 0.7rem;
+.hero-table {
+  background-color: var(--hero-background);
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-table-head {
+  display: flex;
+  align-items: center;
+  padding: $row-padding;
+  color: var(--hero-grey);
+  margin-bottom: 0.3rem;
+  border-bottom: 1px solid var(--hero-grey);
+  background-color: white;
+
+  .mat-header-cell {
+    color: var(--hero-primary);
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  span {
+    color: var(--hero-grey);
+    font-size: 30px;
+  }
+}
+
+.hero-table-footer {
+  display: flex;
+  align-items: center;
+  padding: $row-padding;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--hero-grey);
+  margin-bottom: 0.3rem;
+  border-top: 1px solid var(--hero-grey);
+  background-color: white;
+}
+
+mat-cell {
+  cursor: pointer;
+}
+
+.hero-row {
+  padding: $row-padding;
+  margin-bottom: 0.3rem;
+  background-color: white;
+  position: relative;
+
+  &:hover {
+    background-color: transparent;
+    .actions {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0);
+      transition: all 150ms ease-in;
+    }
+  }
+
+  &.no-hover {
+    &:hover {
+      background-color: transparent !important;
+    }
+  }
+
+  button {
+    max-height: 40px;
+  }
+}

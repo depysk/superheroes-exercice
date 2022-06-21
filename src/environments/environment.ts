@@ -4,6 +4,9 @@
 
 export const environment = {
   production: false,
+  config: {
+    wsBaseUrl: 'https://akabab.github.io/superhero-api/api',
+  },
 };
 
 /*

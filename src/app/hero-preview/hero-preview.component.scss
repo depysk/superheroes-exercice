@@ -1,0 +1,25 @@
+.hero-sidepanel {
+  background: white;
+  width: 100%;
+}
+
+.hero-sidepanel-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  padding: 2px 20px 10px 10px;
+
+  .cancel {
+    span {
+      color: var(--hero-grey) !important;
+    }
+  }
+
+  .title {
+    span {
+      color: var(--hero-grey);
+      font-size: 35px;
+    }
+  }
+}

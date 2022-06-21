@@ -1,0 +1,132 @@
+<div class="hero-sidepanel">
+  <div class="hero-sidepanel-header">
+    <div class="d-flex justify-content-start">
+      <button mat-icon-button color="primary" (click)="onClose()" role="close-sidebar-tab">
+        <mat-icon color="primary">cancel</mat-icon>
+      </button>
+    </div>
+    <div class="title">
+      <h2 class="m-0">{{ hero?.name }}</h2>
+      <p class="text medium m-0 justify-content-center">({{ hero?.slug }})</p>
+    </div>
+    <div class="d-flex justify-content-end actions">
+      <button mat-icon-button color="primary" class="me-3" (click)="onRefresh()" role="refresh-hero-data">
+        <mat-icon>refresh</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <img [src]="hero?.images?.md" [alt]="hero?.name" />
+  </div>
+</div>
+
+<div class="hero-sidepanel-body">
+  <mat-tab-group class="preview-tab-group">
+    <mat-tab label="Power stats">
+      <div class="row py-2">
+        <div class="col-5">Intelligence</div>
+        <div class="col">{{ hero?.powerstats?.intelligence }}</div>
+      </div>
+      <div class="row py-2">
+        <div class="col-5">Strength</div>
+        <div class="col">{{ hero?.powerstats?.strength }}</div>
+      </div>
+      <div class="row py-2">
+        <div class="col-5">Spedd</div>
+        <div class="col">{{ hero?.powerstats?.speed }}</div>
+      </div>
+      <div class="row py-2">
+        <div class="col-5">Durability</div>
+        <div class="col">{{ hero?.powerstats?.durability }}</div>
+      </div>
+      <div class="row py-2">
+        <div class="col-5">Power</div>
+        <div class="col">{{ hero?.powerstats?.power }}</div>
+      </div>
+      <div class="row py-2">
+        <div class="col-5">Combat</div>
+        <div class="col">{{ hero?.powerstats?.combat }}</div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Appearance">
+      <div class="row py-2">
+        <div class="col-5">Gender</div>
+        <div class="col">{{ hero?.appearance?.gender }}</div>
+      </div>
+      <div class="row py-2">
+        <div class="col-5">Race</div>
+        <div class="col">{{ hero?.appearance?.race }}</div>
+      </div>
+      <div class="row py-2">
+        <div class="col-5">Height</div>
+        <div class="col">{{ hero?.appearance?.height }}</div>
+      </div>
+      <div class="row py-2">
+        <div class="col-5">Weight</div>
+        <div class="col">{{ hero?.appearance?.weight }}</div>
+      </div>
+      <div class="row py-2">
+        <div class="col-5">Eyes color</div>
+        <div class="col">{{ hero?.appearance?.eyeColor }}</div>
+      </div>
+      <div class="row py-2">
+        <div class="col-5">Hairs color</div>
+        <div class="col">{{ hero?.appearance?.hairColor }}</div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Biography">
+      <div class="row py-2">
+        <div class="col-5">Full name</div>
+        <div class="col">{{ hero?.biography?.fullName }}</div>
+      </div>
+      <div class="row py-2">
+        <div class="col-5">AlterEgos</div>
+        <div class="col">{{ hero?.biography?.alterEgos }}</div>
+      </div>
+      <div class="row py-2">
+        <div class="col-5">Aliases</div>
+        <div class="col">{{ hero?.biography?.aliases }}</div>
+      </div>
+      <div class="row py-2">
+        <div class="col-5">Place of Birth</div>
+        <div class="col">{{ hero?.biography?.placeOfBirth }}</div>
+      </div>
+      <div class="row py-2">
+        <div class="col-5">First appearance</div>
+        <div class="col">{{ hero?.biography?.firstAppearance }}</div>
+      </div>
+      <div class="row py-2">
+        <div class="col-5">Publisher</div>
+        <div class="col">{{ hero?.biography?.publisher }}</div>
+      </div>
+      <div class="row py-2">
+        <div class="col-5">Alignment</div>
+        <div class="col">{{ hero?.biography?.alignment }}</div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Work">
+      <div class="row py-2">
+        <div class="col-5">Occupation</div>
+        <div class="col">{{ hero?.work?.occupation }}</div>
+      </div>
+      <div class="row py-2">
+        <div class="col-5">Base</div>
+        <div class="col">{{ hero?.work?.base }}</div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Connections">
+      <div class="row py-2">
+        <div class="col-5">Group affiliation</div>
+        <div class="col">{{ hero?.connections?.groupAffiliation }}</div>
+      </div>
+      <div class="row py-2">
+        <div class="col-5">Relatives</div>
+        <div class="col">{{ hero?.connections?.relatives }}</div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
